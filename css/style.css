@@ -56,9 +56,49 @@ body {
 
     overflow-x: hidden;
 
+    position: relative;
+
+    isolation: isolate;
+
     display: flex;
 
     flex-direction: column;
+}
+
+/* Decorative pattern backgrounds shared by all three pages. */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    top: 12vh;
+    left: 3vw;
+    width: 217px;
+    height: 217px;
+    background-image: url("../assets/images/pattern-circle.svg");
+    background-position: center;
+    background-size: contain;
+}
+
+body::after {
+    right: 0;
+    bottom: 0;
+    width: min(52vw, 730px);
+    height: min(52vh, 520px);
+    background-image: url("../assets/images/pattern-lines.svg");
+    background-position: right bottom;
+    background-size: contain;
+    opacity: 0.45;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
 }
 
 img {
@@ -290,27 +330,6 @@ p {
     border-color: var(--orange-500);
 }
 
-.hero-section::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 18%;
-
-    left: 4%;
-
-    width: 110px;
-
-    height: 110px;
-
-    background: url("../assets/images/pattern-circle.svg")
-                center / contain no-repeat;
-
-    opacity: 0.65;
-
-    pointer-events: none;
-}
 
 .about-highlight {
 
@@ -318,29 +337,6 @@ p {
 
     overflow: hidden;
 }
-
-.about-highlight::after {
-
-    content: "";
-
-    position: absolute;
-
-    right: 0;
-
-    bottom: 0;
-
-    width: 100px;
-
-    height: 100px;
-
-    background: url("../assets/images/pattern-lines.svg")
-                center / contain no-repeat;
-
-    opacity: 0.35;
-
-    pointer-events: none;
-}
-
 
 
 .home-page {
@@ -1287,6 +1283,19 @@ p {
 
 
 @media screen and (max-width: 600px) {
+
+    body::before {
+        top: 10vh;
+        left: -45px;
+        width: 170px;
+        height: 170px;
+    }
+
+    body::after {
+        width: 78vw;
+        height: 38vh;
+        opacity: 0.35;
+    }
 
     body {
 
