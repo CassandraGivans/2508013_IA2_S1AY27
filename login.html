@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Register for Coding Conf 2026.">
+
+    <title>Coding Conf 2026 | Registration</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script src="../js/validation.js" defer></script>
+</head>
+
+<body class="form-page">
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="brand">
+                <img src="../assets/images/logo-full.svg" alt="Coding Conf logo">
+            </a>
+
+            <a href="index.html" class="nav-link">Home</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="registration-main">
+
+        <section class="registration-section">
+
+            <div class="page-heading">
+
+                <h1>
+                    Your Journey to
+                    <span class="gradient-text">Coding Conf 2026</span>
+                    Starts Here!
+                </h1>
+
+                <p>
+                    Complete the form below to receive your personalized
+                    Coding Conf ticket.
+                </p>
+
+            </div>
+
+
+            <form id="registrationForm" novalidate>
+
+                <div class="form-group">
+
+                    <label for="fullName">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        aria-describedby="nameError"
+                        required
+                    >
+
+                    <small class="error-message" id="nameError" aria-live="polite"></small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                        aria-describedby="emailError"
+                        required
+                    >
+
+                    <small class="error-message" id="emailError" aria-live="polite"></small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="github">GitHub Username</label>
+
+                    <input
+                        type="text"
+                        id="github"
+                        name="github"
+                        placeholder="@yourusername"
+                        aria-describedby="githubError"
+                        required
+                    >
+
+                    <small class="error-message" id="githubError" aria-live="polite"></small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="avatar">Upload Your Profile Picture</label>
+
+                    <div class="upload-container">
+
+                        <label for="avatar" class="upload-label">
+
+                            <img
+                                src="../assets/images/icon-upload.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+
+                            <span>Drag and drop or click to upload</span>
+
+                            <span class="upload-subtext">
+                                JPEG or PNG, maximum 500KB
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="avatar"
+                            name="avatar"
+                            accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+                            aria-describedby="avatarError uploadInfo"
+                            required
+                        >
+
+                    </div>
+
+                    <small class="error-message" id="avatarError" aria-live="polite"></small>
+
+                    <p class="upload-info" id="uploadInfo">
+                        <img src="../assets/images/icon-info.svg" alt="">
+                        Upload a clear profile picture below 500KB.
+                    </p>
+
+                    <div class="preview-container" id="previewContainer" hidden>
+
+                        <img
+                            src="../assets/images/image-avatar.jpg"
+                            alt="Preview of selected profile picture"
+                            id="avatarPreview"
+                        >
+
+                        <span id="fileName">No file selected</span>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-button submit-button">
+                    Generate My Ticket
+                    <span aria-hidden="true">&rarr;</span>
+                </button>
+
+                <p class="form-footer">
+                    Already registered?
+                    <a href="index.html">Return to homepage</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>&copy; 2026 Coding Conf. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>
